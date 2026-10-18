@@ -539,11 +539,11 @@
         cQ(g);
         return ax[g].length !== l ? (cE(g, y, l, k), !0) : !1
     }
-    var dT = [60, 74, 112, 200, 256, 512];
+    var dT = [600, 74, 112, 200, 256, 512];
 
     function dU() {
         var g, k, y, l, u, m;
-        this.db = "Very Easy;Easy;Normal;Hard;Harder;Very Hard".split(";");
+        this.db = "simple;Easy;average;tuff;Hard;too Hard".split(";");
         this.dc = [97, 95, 93, 90, 87, 84];
         this.dK = [98, 95, 90, 40, 20, 0];
         this.dd = [85, 70, 65, 30, 7, 3];
@@ -1704,7 +1704,7 @@
             cA.fillRect(0, l - 1, 4 * l, 1);
             cA.fillText(A[C], 2 * l, .54 * l)
         }
-        var l, u, m, A = ["Quit Game", "Surrender", "Statistics"],
+        var l, u, m, A = ["ragequit", "loose", "economics"],
             z, B;
         this.bi = function () {
             z = -1;
@@ -1895,10 +1895,10 @@
             for (var I = u.length - 1; 0 <= I; I--) u[I].id === G && (u[I].gI = 1)
         };
         this.fU = function (G, I) {
-            if (0 === I) at.au[G < cj ? 4 : 3]++, bv.cJ(G, 0), k(r ? 100 : 160, "You conquered " + fy[G] + ".", 0, G, "rgb(10,220,10)", hZ, -1, !1);
-            else if (1 === I) l(50, b1), bv.cJ(G, 1), k(360, "You were conquered by " + fy[G] + ".", 0, G, "rgb(255,40,40)", hZ, -1, !0), eE.gL(G, 2700, !0, 0);
-            else if (2 === I) bv.cJ(G, 2), k(0, "Congratulations! You won the game.", 0, G, "rgb(10,255,255)", hZ, -1, !0), eE.gL(G, 2700, !0, 0);
-            else if (3 === I) bv.cJ(G, 2), k(0, fy[G] + " won the game.", 0, G, cD, hZ, -1, !0), eE.gL(G, 2700, !0, 0);
+            if (0 === I) at.au[G < cj ? 4 : 3]++, bv.cJ(G, 0), k(r ? 100 : 160, "You mewed" + fy[G] + ".", 0, G, "rgb(10,220,10)", hZ, -1, !1);
+            else if (1 === I) l(50, b1), bv.cJ(G, 1), k(360, "You were mewed by " + fy[G] + ".", 0, G, "rgb(255,40,40)", hZ, -1, !0), eE.gL(G, 2700, !0, 0);
+            else if (2 === I) bv.cJ(G, 2), k(0, "Congratulations! You mewed the game.", 0, G, "rgb(10,255,255)", hZ, -1, !0), eE.gL(G, 2700, !0, 0);
+            else if (3 === I) bv.cJ(G, 2), k(0, fy[G] + " mewed the game.", 0, G, cD, hZ, -1, !0), eE.gL(G, 2700, !0, 0);
             else if (4 === I) {
                 iY--;
                 iX--;
@@ -1909,14 +1909,14 @@
                     D.push(G);
                     2 < E && (D[0] < K - 140 || 2 === fG) && (k(180, fy[G] + " and " + Math.floor(E / 2) + " other players left the game.", 4, G, cD, hZ, -1, !1), D = [])
                 } else k(180, fy[G] + " left the game.", 4, G, cD, hZ, -1, !0)
-            } else 5 === I ? (y(1, 5), dw.m1(G) ? k(180, fy[G] + " has broken the non-aggression pact and invades you!", 1, G, "rgb(255,200,180)", hZ, -1, !0) : k(180, fy[G] + " is attacking you!", 1, G, "rgb(255,70,10)", hZ, -1, !0)) : 18 === I ? k(255, "Choose your start position!", 18, 0, cD, hZ, -1, !1) : 21 === I ? k(220, "You surrendered!", I, 0, "rgb(255,40,40)", hZ, -1, !1) : 22 === I && k(5 < cj ? 80 : 220, fy[G] + " surrendered!", I, G, "rgb(10,220,10)", hZ, -1, !0)
+            } else 5 === I ? (y(1, 5), dw.m1(G) ? k(180, fy[G] + " has broken the mew-aggression pact and invades you!", 1, G, "rgb(255,200,180)", hZ, -1, !0) : k(180, fy[G] + " is attacking you!", 1, G, "rgb(255,70,10)", hZ, -1, !0)) : 18 === I ? k(255, "Choose your start position!", 18, 0, cD, hZ, -1, !1) : 21 === I ? k(220, "You surrendered!", I, 0, "rgb(255,40,40)", hZ, -1, !1) : 22 === I && k(5 < cj ? 80 : 220, fy[G] + " surrendered!", I, G, "rgb(10,220,10)", hZ, -1, !0)
         };
         this.m2 = function (G) {
             k(200, "Error [" + G + "]", 94, 0, cD, m4, -1, !1)
         };
         this.iR = function (G) {
             bv.cJ(G, 2);
-            512 > cj ? k(0, fy[G] + " won the game.", 3, G, cD, hZ, -1, !0) : k(0, fy[G] + " has been immortalized!", 3, G, cD, hZ, -1, !0);
+            512 > cj ? k(0, fy[G] + " mewed the game.", 3, G, cD, hZ, -1, !0) : k(0, fy[G] + " has been rizzed!", 3, G, cD, hZ, -1, !0);
             eE.gL(G, 2700, !0, 0)
         };
         this.m5 = function (G, I, E) {
@@ -1933,7 +1933,7 @@
         };
         this.iQ = function (G) {
             var I = dN.iO[eC.mC()];
-            G ? (9 === dg ? (G = "The Resistance defeated the virus.", bv.mD("The Resistance", 2, 1, 12)) : G = "Congratulations! Team " + dN.bh[I] + " has won the game!", k(0, G, 40, 0, "rgb(10,220,10)", hZ, -1, !1)) : (9 === dg ? (G = "Mankind lost the war against the virus.", bv.mD("The Virus", 2, 0, 16)) : G = "Our alliance has been defeated!", k(0, G, 41, 0, "rgb(200,80,80)", hZ, -1, !1));
+            G ? (9 === dg ? (G = "The meowbahh defeated the virus.", bv.mD("The Resistance", 2, 1, 12)) : G = "Congratulations! Team " + dN.bh[I] + " has mewed the game!", k(0, G, 40, 0, "rgb(10,220,10)", hZ, -1, !1)) : (9 === dg ? (G = "Mankind lost the war against the meowbahh.", bv.mD("The Virus", 2, 0, 16)) : G = "Our alliance has been mewed!", k(0, G, 41, 0, "rgb(200,80,80)", hZ, -1, !1));
             9 !== dg && bv.mD("Team " + dN.bh[I], 2, 1, 12);
             eE.gU(2700)
         };
@@ -1948,13 +1948,13 @@
             k(0, "[" + G + "] has won " + cj + (ip ? " x 2" : "") + " points!", 45, 0, "rgb(225,240,255)", hZ, -1, !1)
         };
         this.kx = function (G, I) {
-            0 === I ? l(50, G) ? (k(128, "You signed a non-aggression pact with " + fy[G] + ".", 52, G, cD, hZ, -1, !0), dw.mH(G, 2, 255)) : k(384, "You asked " + fy[G] + " to sign a non-aggression pact.", 51, G, cD, hZ, -1, !0) : l(51, G) ? (k(128, fy[G] + " accepted the non-aggression pact.", 52, G, cD, "rgba(60,120,10,0.9)", -1, !0), dw.mH(G, 2, 255)) : (k(384, fy[G] + " requests a non-aggression pact.", 50, G, cD, "rgba(90,90,90,0.9)", -1, !0), dw.mH(G, 2, 96))
+            0 === I ? l(50, G) ? (k(128, "You signed a mew-aggression pact with " + fy[G] + ".", 52, G, cD, hZ, -1, !0), dw.mH(G, 2, 255)) : k(384, "You asked " + fy[G] + " to sign a mew-aggression pact.", 51, G, cD, hZ, -1, !0) : l(51, G) ? (k(128, fy[G] + " accepted the mew-aggression pact.", 52, G, cD, "rgba(60,120,10,0.9)", -1, !0), dw.mH(G, 2, 255)) : (k(384, fy[G] + " requests a mew-aggression pact.", 50, G, cD, "rgba(90,90,90,0.9)", -1, !0), dw.mH(G, 2, 96))
         };
         this.kn = function (G, I) {
-            1 < G.length ? k(230, "You asked " + G.length + " players to attack " + fy[I] + ".", 66, I, cD, hZ, -1, !0) : k(230, "You asked " + fy[G[0]] + " to attack " + fy[I] + ".", 66, G[0], cD, hZ, I, !0)
+            1 < G.length ? k(230, "You asked " + G.length + " players to mew " + fy[I] + ".", 66, I, cD, hZ, -1, !0) : k(230, "You asked " + fy[G[0]] + " to mew " + fy[I] + ".", 66, G[0], cD, hZ, I, !0)
         };
         this.mI = function (G, I) {
-            2 * bN[G] > 3 * bN[ap] ? k(230, fy[G] + " orders you to attack " + fy[I] + "!", 66, G, cD, "rgba(80,40,5,0.9)", I, !0) : k(230, fy[G] + " asks you to attack " + fy[I] + ".", 66, G, cD, "rgba(80,70,5,0.9)", I, !0)
+            2 * bN[G] > 3 * bN[ap] ? k(230, fy[G] + " mews you to attack " + fy[I] + "!", 66, G, cD, "rgba(80,40,5,0.9)", I, !0) : k(230, fy[G] + " mews you to attack " + fy[I] + ".", 66, G, cD, "rgba(80,70,5,0.9)", I, !0)
         };
         this.kw = function (G, I) {
             var E;
@@ -1969,17 +1969,17 @@
             return !1
         };
         this.kq = function () {
-            100 <= aq[ap] || k(80, "Your balance is too low!", 9, 0, cD, hZ, -1, !1)
+            100 <= aq[ap] || k(80, "Your rizz is too low!", 9, 0, cD, hZ, -1, !1)
         };
         this.kp = function () {
-            k(80, "Boosting is disallowed in the first minute!", 9, 0, cD, hZ, -1, !1)
+            k(80, "mewing is disallowed in the first minute!", 9, 0, cD, hZ, -1, !1)
         };
         this.mM = function (G, I) {
-            k(200, "You exported " + e9.fz(G) + " resource" + (1 === G ? "" : "s") + " to " + fy[I] + ".", 30, I, "rgb(190,255,190)", hZ, -1, !0)
+            k(200, "You exported " + e9.fz(G) + " cats" + (1 === G ? "" : "s") + " to " + fy[I] + ".", 30, I, "rgb(190,255,190)", hZ, -1, !0)
         };
         this.mO = function (G, I) {
             var E = 200 - 20 * u.length;
-            k(80 > E ? 80 : E, fy[I] + " supported you with " + e9.fz(G) + " resource" + (1 === G ? "" : "s") + ".", 31, I, fx, "rgba(205,255,205,0.9)", -1, !0);
+            k(80 > E ? 80 : E, fy[I] + " rizzed you with " + e9.fz(G) + " cats" + (1 === G ? "" : "s") + ".", 31, I, fx, "rgba(205,255,205,0.9)", -1, !0);
             y(31, r ? 4 : 6)
         };
         this.mQ = function (G, I) {
@@ -1988,15 +1988,15 @@
                 var K = bx.dL();
                 C.push(K);
                 C.push(G);
-                2 < E && (C[0] < K - 140 || 2 === fG) && (k(260, fy[G] + " and " + Math.floor(E / 2) + " other players were conquered.", 7, G, cD, hZ, -1, !1), C = [])
-            } else k(260, fy[G] + " was conquered by " + fy[I] + ".", 7, I, cD, hZ, -1, !0)
+                2 < E && (C[0] < K - 140 || 2 === fG) && (k(260, fy[G] + " and " + Math.floor(E / 2) + " other players were rizzed.", 7, G, cD, hZ, -1, !1), C = [])
+            } else k(260, fy[G] + " was rizzed by " + fy[I] + ".", 7, I, cD, hZ, -1, !0)
         };
         this.d7 = function () {
             var G, I = u.length - H;
             I = 1 >= I ? 1 : I * I;
             for (G = u.length - 1; 0 <= G; G--) 0 < u[G].gI && (u[G].gI -= I, 0 >= u[G].gI && u.splice(G, 1));
             if (128 !== F && (F++, !(128 > F)))
-                for (G = dP - 1; 0 <= G; G--) 0 !== mS[dQ[G]] && k(240, fy[dQ[G]] + " joined the game.", 1, dQ[G], fx, "rgba(255,255,255,0.75)", -1, !0)
+                for (G = dP - 1; 0 <= G; G--) 0 !== mS[dQ[G]] && k(240, fy[dQ[G]] + " joined the chaos.", 1, dQ[G], fx, "rgba(255,255,255,0.75)", -1, !0)
         };
         this.c9 = function () {
             for (var G = g(), I, E = u.length - 1; 0 <= E; E--) I = G - (E + 1) * m, 50 === u[E].id ? (cA.drawImage(u[E].lE, fu - u[E].bu - B - A, I), cA.drawImage(L, fu - B - A, I)) : cA.drawImage(u[E].lE, fu - u[E].bu - A, I)
@@ -2312,7 +2312,7 @@
         ns = [bm, nq + bm],
         nt = "https://play.google.com/store/apps/details?id=territorial.io",
         nu = "https://apps.apple.com/app/id1581110913",
-        nv = "https://www.youtube.com/watch?v=toZTQ8aRdFc",
+        nv = "https://www.youtube.com/@alphaphenixplaysmc",
         nw = "https://discord.gg/pa5TH6hZrv",
         nx = "https://www.instagram.com/davidtschacher/",
         ma = "https://territorial.io/cookie_policy",
@@ -2621,7 +2621,7 @@
             B = Array(2);
             C = Array(2);
             D = Array(2);
-            H = ["YOU CONQUERED", "YOU WERE CONQUERED BY", "THE GAME WAS WON BY", "MAP:"];
+            H = ["YOU RIZZED", "YOU WERE RIZZED BY", "THE GAME WAS MEWED BY", "MAP:"];
             D[0] = .3;
             D[1] = .7;
             F = Array(4);
@@ -3512,7 +3512,7 @@
             ta = 0;
             la = !1;
             sa = da = 0;
-            X = "LEADERBOARD";
+            X = "MEWERBOARD";
             Y = -1;
             z = r ? 6 : 10;
             V = 0;
@@ -3693,9 +3693,9 @@
             E = Array(8);
             E[0] = "Humans";
             E[1] = di ? "Players" : "Bots";
-            E[2] = "Spectators";
+            E[2] = "Killed Players";
             E[3] = "Threshold";
-            E[4] = "Occupation";
+            E[4] = "Mew Level";
             E[5] = "Interest";
             E[6] = "Income";
             E[7] = "Time";
@@ -4047,7 +4047,7 @@
         this.t9 = .235;
         this.tA = .9;
         this.tB = .08;
-        var g = ["Best Players", "Best Clans", "LEGENDS NEVER DIE", "THE NEVER ENDING WAR"],
+        var g = ["Best Mewers", "Best Mewings", "MEWERS NEVER DIE", "THE NEVER ENDING MEW"],
             k, y = [-1E6, -1E6];
         this.position = [0, 0];
         this.tG = [0, 0];
@@ -4387,7 +4387,7 @@
                 f2: 0,
                 bu: Math.floor(.6 * this.bu - this.eo / 2),
                 cp: this.cp,
-                md: "Multiplayer",
+                md: "W.I.P",
                 font: m,
                 ts: "rgba(22,88,22,0.8)",
                 br: u
@@ -4399,7 +4399,7 @@
                 f2: 0,
                 bu: this.bu - this.tp[0].bu - this.eo,
                 cp: this.cp,
-                md: "Singleplayer",
+                md: "PLAY :D",
                 font: m,
                 ts: "rgba(22,88,88,0.8)",
                 br: u
@@ -4429,7 +4429,7 @@
                 f2: 0,
                 bu: this.bu,
                 cp: Math.floor(.3 * this.cp),
-                md: "The game was updated!",
+                md: "Work In progress!",
                 font: this.tp[1].font,
                 ts: "rgba(100,0,0,0.8)",
                 br: this.tp[1].br
@@ -4439,7 +4439,7 @@
                 f2: 0,
                 bu: this.tp[0].bu,
                 cp: Math.floor(.8 * this.cp),
-                md: "Reload",
+                md: "Quit",
                 font: this.tp[0].font,
                 ts: "rgba(0,100,0,0.8)",
                 br: this.tp[0].br
@@ -4449,7 +4449,7 @@
                 f2: 0,
                 bu: this.tp[1].bu,
                 cp: this.tp[5].cp,
-                md: "Back",
+                md: "OK",
                 font: this.tp[0].font,
                 ts: "rgba(0,0,0,0.8)",
                 br: this.tp[0].br
@@ -4902,7 +4902,7 @@
                 code: 3232
             });
             l.push({
-                l: "No Servers Found",
+                l: "You can't silly",
                 code: 3249
             });
             l.push({
@@ -4914,7 +4914,7 @@
                 code: 4207
             });
             l.push({
-                l: "Invalid Username",
+                l: "You Can't silly",
                 code: 4214
             });
             l.push({
@@ -6644,7 +6644,7 @@
         var g, k;
         this.bi = function () {
             var y, l;
-            g = "Abbasid Caliphate;Aceh s;Achaemenid Z;Afsharid z;Aghlabid Emirate;Ahom z;Akkadian Z;Aksumite Z;Akwamu;Alaouite z;Almohad Caliphate;Almoravid z;Angevin Z;Aq Qoyunlu;Armenian Z;Assyria;Ashanti Z;Austrian Z;Austria-Hungary;Ayyubid z;Aztec Z;Aulikara Z;Babylonian Z;Balhae;Banten s;S Banjar;Bamana Z;Bengal s;Benin Z;Kadamba z;Bornu Z;E Brazil;Britannic Z;British Z;British Raj;Bruneian Z;Bukhara Z;Burgundian State;Buyid z;Byzantine Z;Caliphate of C\u00f3rdoba;Cao Wei;Carthaginian Z;Cebu Rajahnate;Chagatai Khanate;Chalukya z;Chauhan z;Chav\u00edn Z;Chenla;Chera z;Chola z;Comanche Z;Congo Free State;Crimean Khanate;Dacian Z;Delhi s;Demak s;Durrani Z;Dutch Z;Egyptian Z;Elamite Z;Exarchate of Africa;Abyssinia;Fatimid Caliphate;First French Z;Frankish Z;Funan;Gallic Z;Gaza Z;Republic of Genoa;German Z;Ghana Z;Ghaznavid z;Ghurid z;Goguryeo;Goryeo;Gorkha Z;G\u00f6kt\u00fcrk Khaganate;Golden Horde;S Gowa;Seljuq Z;Gupta Z;Hafsid Y;Han z;Hanseatic League;E Harsha;Hephthalite Z;Hittite Z;Holy Roman Z;Hotak z;Hoysala Z;Hunnic Z;Husainid z;Idrisid z;Ilkhanate;K Israel;K Judah;Inca Z;Italian Z;E Japan;Jin z;Johor Z;Jolof Z;Joseon;Kaabu Z;Kachari Y;Kalmar Union;Kanem Z;Kanva z;Kara-Khanid Khanate;Kazakh Khanate;Khazar Khaganate;Khmer Z;Khilji z;Khwarazmian z;Kievan Rus';Konbaung z;Kong Z;Korean Z;Kushan Z;K Kush;Lakota;Latin Z;Later L\u00ea z;Liao z;Lodi s;Khmer Z;Macedonian Z;Majapahit Z;Mali Z;Malacca Z;Mamluk s;Manchukuo;Maratha Z;Marinid z;Massina Z;Mataram s;Mauretania;Mauryan Z;Median Z;Mlechchha z;Ming z;Mitanni Z;Mongol Z;Mughal Z;Nanda Z;Nguy\u1ec5n z;North Sea Z;E Nicaea;Numidia;Omani Z;Ottoman Z;Oyo Z;Pagan Z;Pahlavi z;Pala Z;Palmyrene Z;Parthian Z;Pontic Z;Portuguese Z;K Prussia;Ptolemaic Z;Qajar z;Qara Qoyunlu;Qin z;Qing z;Ramnad Sethupathis;Rashidun Caliphate;Rashtrakuta z;Roman Z;Rouran Khaganate;Rozwi Z;Rustamid z;Russian Z;Tsardom of Russia;Saadi z;Safavid z;Saffarid z;Sassanid z;Satavahana z;Samanid Z;Soviet Union;Saudeleur z;Duchy of Savoy;Seleucid Z;Serbian Z;Shu Han;Shang z;Siam Z;Sikh Z;Singhasari;Sokoto Caliphate;Song z;Songhai Z;Spanish Z;Srivijaya Z;Sui z;K Mysore;Shunga Z;S Sulu;Sumer;Sur Z;Swedish Z;Tahirid z;Tang z;T\u00e2y S\u01a1n z;S Ternate;E Thessalonica;German Reich;Tibetan Z;Tondo z;S Tidore;Timurid Z;K Tlemcen;E Trebizond;Toltec Z;Toungoo z;Toucouleur Z;Tu'i Tonga Z;Turgesh Khaganate;Umayyad Caliphate;Uyunid Emirate;Uyghur Khaganate;Uzbek Khanate;Vandal Y;Vijayanagara Z;Republic of Venice;Wari Z;Wassoulou Z;Wattasids;Western Roman Z;Eastern Wu;Western Xia z;Xin z;Yuan z;Zand z;Zhou z;Zulu Z;Yugoslavia;Kosovo;Sikkim;Kanem\u2013Bornu Z;Wadai Z;Ethiopian Z;Rozvi Z;Sasanian Z;E Vietnam;Shilluk Y;K Aksum;Gwiriko Y;Toro Y;Malindi Y;K Loango;K Mapungubwe;Ryukyu Y;K Cyprus;K Jerusalem;Garhwal Y;K Nepal;K Cambodia;Champa Y;Hanthawaddy Y;Phayao Y;K Sardinia;K Sicily;K Gwynedd;K Scotland;K Desmond;K Poland;K Hungary;K Croatia;K Bohemia;Albanian Y;K Georgia;K Portugal;Khanate of Sibir;K Romania;Cossack Hetmanate;Duchy of Bouillon;K Ireland;Lordship of Ireland;K Italy;Republic of Pisa;Idrisid z;Almoravid z;Almohad Caliphate;Marinid z;Wattasid z;Saadian z;Republic of Sal\u00e9;Rif Republic;K Kush;Makuria;Alodia;Ayyubid z;Mamluk s;Egypt Eyalet;K Fazughli;S Sennar;S Darfur;Mahdist State;S Egypt;K Egypt;Emirate of Cyrenaica;K Libya;Republic of Egypt;Republic of the Sudan;United Arab Republic;Libyan Arab Republic;Zirid z;Hafsid z;K Kuku;Regency of Algiers;Gurunsi;Liptako;Tenkodogo;Wogodogo;Yatenga;Bilanga;Bilayanga;Bongandini;Con;Macakoali;Piela;Nungu;K Sine;K Saloum;K Baol;K Cayor;K Waalo;Bundu;Bonoman;Gyaaman;Denkyira;Mankessim Y;K Dahomey;Oyo Z;K Nri;Aro Confederacy;Kwararafa;Biafra;Buganda;Bunyoro;Ankole;Busoga;Tanganyika;Kuba Y;K Luba;K Lunda;Yeke Y;K Ndongo;Kasanje Y;K Matamba;Mbunda Y;Chokwe Y;Kazembe Y;K Butua;Ndebele Y;Mthethwa Z;Bophuthatswana;Ciskei;Transkei;Venda;Rhodesia;Kart z;Nogai Horde;Khanate of Bukhara;Khanate of Khiva;Khamag Mongol;Northern Fujiwara;Kamakura Shogunate;Ashikaga Shogunate;Jaxa;Republic of Ezo;Jiangxi Soviet;Hunan Soviet;Guangzhou Commune;Gojoseon;Alaiye;Beylik of Bafra;Kara Koyunlu;Kars Republic;K Iraq;Arab Federation;Kar-Kiya z;Baduspanids;Marashiyan z;Afrasiyab z;Mihrabanid z;Safavid Iran;Sheikhdom of Kuwait;Bani Khalid Emirate;Emirate of Diriyah;Emirate of Najd;Muscat and Oman;Emirate of Riyadh;S Najd;K Hejaz;Fadhli s;Emirate of Beihan;Emirate of Dhala;S Lahej;Republic of Kuwait;K Cochin;Jaffna Y;Laur Y;Pandya z;Jaunpur s;Jaintia Y;Hyderabad State;Travancore;Udaipur State;Manikya z;Lan Xang;K Vientiane;K Champasak;Lao Issara;K Laos;Pyu States;Ava;Mon Ys;Pegu;K Mrauk U;Taungoo z;Shan States;Arakan;Raktamaritika;Singhanavati;Dvaravati;Ngoenyang;Hariphunchai;Tambralinga;Lavo Y;Langkasuka;Sukhothai Y;S Singora;Ayutthaya Y;Thonburi Y;Lan Na;Pattani Y;Jambi s;Palembang s;S Deli;S Langkat;S Serdang;S Cirebon;K Pajang;K Bali;Bima s;K Larantuka;K Banggai;Luwu;S Bone;Caucasian Albania;Kabardia;Circassia;K Abkhazia;Elisu s;Avar Khanate;Caucasian Imamate;K Imereti;K Kartli;K Kakheti;Crown of Aragon;Emirate of Granada;K Majorca;Crown of Castile;K Haiti;Cocoll\u00e1n;Zapotec Civilization;Mosquito Y;Somoza Regime;Iroquois Confederacy;Cherokee Nation;Vermont Republic;State of Muskogee;K Alo;K Sigave;K Fiji;K Nauru;K Chile;Muisca Confederation;El Stronato;K Chimor;Jungle Republic;Liga Federal;Supreme Junta;Weimar Republic;K Bavaria;Bremen;Frankfurt;Hamburg;K Hanover;Holstein;Lippe;Nassau;Oldenburg;Pomerania;Reuss;Saxe-Altenburg;Saxony;Schleswig;Waldeck;W\u00fcrttemberg;Helvetic Republic;Republic of Florence;Duchy of Urbino;Republic of Cospaia;Duchy of Lucca;Duchy of Mantua;Duchy of Milan;Papal States".split(";");
+            g = "alpha's Caliphate;Aceh s;Achaemenid Z;Afsharid z;Aghlabid Emirate;Ahom z;Akkadian Z;Aksumite Z;Akwamu;Alaouite z;Almohad Caliphate;Almoravid z;Angevin Z;Aq Qoyunlu;Armenian Z;Assyria;Ashanti Z;Austrian Z;Austria-Hungary;Ayyubid z;Aztec Z;Aulikara Z;Babylonian Z;Balhae;Banten s;S Banjar;Bamana Z;Bengal s;Benin Z;Kadamba z;Bornu Z;E Brazil;Britannic Z;British Z;British Raj;Bruneian Z;Bukhara Z;Burgundian State;Buyid z;Byzantine Z;Caliphate of C\u00f3rdoba;Cao Wei;Carthaginian Z;Cebu Rajahnate;Chagatai Khanate;Chalukya z;Chauhan z;Chav\u00edn Z;Chenla;Chera z;Chola z;Comanche Z;Congo Free State;Crimean Khanate;Dacian Z;Delhi s;Demak s;Durrani Z;Dutch Z;Egyptian Z;Elamite Z;Exarchate of Africa;Abyssinia;Fatimid Caliphate;First French Z;Frankish Z;Funan;Gallic Z;Gaza Z;Republic of Genoa;German Z;Ghana Z;Ghaznavid z;Ghurid z;Goguryeo;Goryeo;Gorkha Z;G\u00f6kt\u00fcrk Khaganate;Golden Horde;S Gowa;Seljuq Z;Gupta Z;Hafsid Y;Han z;Hanseatic League;E Harsha;Hephthalite Z;Hittite Z;Holy Roman Z;Hotak z;Hoysala Z;Hunnic Z;Husainid z;Idrisid z;Ilkhanate;K Israel;K Judah;Inca Z;Italian Z;E Japan;Jin z;Johor Z;Jolof Z;Joseon;Kaabu Z;Kachari Y;Kalmar Union;Kanem Z;Kanva z;Kara-Khanid Khanate;Kazakh Khanate;Khazar Khaganate;Khmer Z;Khilji z;Khwarazmian z;Kievan Rus';Konbaung z;Kong Z;Korean Z;Kushan Z;K Kush;Lakota;Latin Z;Later L\u00ea z;Liao z;Lodi s;Khmer Z;Macedonian Z;Majapahit Z;Mali Z;Malacca Z;Mamluk s;Manchukuo;Maratha Z;Marinid z;Massina Z;Mataram s;Mauretania;Mauryan Z;Median Z;Mlechchha z;Ming z;Mitanni Z;Mongol Z;Mughal Z;Nanda Z;Nguy\u1ec5n z;North Sea Z;E Nicaea;Numidia;Omani Z;Ottoman Z;Oyo Z;Pagan Z;Pahlavi z;Pala Z;Palmyrene Z;Parthian Z;Pontic Z;Portuguese Z;K Prussia;Ptolemaic Z;Qajar z;Qara Qoyunlu;Qin z;Qing z;Ramnad Sethupathis;Rashidun Caliphate;Rashtrakuta z;Roman Z;Rouran Khaganate;Rozwi Z;Rustamid z;Russian Z;Tsardom of Russia;Saadi z;Safavid z;Saffarid z;Sassanid z;Satavahana z;Samanid Z;Soviet Union;Saudeleur z;Duchy of Savoy;Seleucid Z;Serbian Z;Shu Han;Shang z;Siam Z;Sikh Z;Singhasari;Sokoto Caliphate;Song z;Songhai Z;Spanish Z;Srivijaya Z;Sui z;K Mysore;Shunga Z;S Sulu;Sumer;Sur Z;Swedish Z;Tahirid z;Tang z;T\u00e2y S\u01a1n z;S Ternate;E Thessalonica;German Reich;Tibetan Z;Tondo z;S Tidore;Timurid Z;K Tlemcen;E Trebizond;Toltec Z;Toungoo z;Toucouleur Z;Tu'i Tonga Z;Turgesh Khaganate;Umayyad Caliphate;Uyunid Emirate;Uyghur Khaganate;Uzbek Khanate;Vandal Y;Vijayanagara Z;Republic of Venice;Wari Z;Wassoulou Z;Wattasids;Western Roman Z;Eastern Wu;Western Xia z;Xin z;Yuan z;Zand z;Zhou z;Zulu Z;Yugoslavia;Kosovo;Sikkim;Kanem\u2013Bornu Z;Wadai Z;Ethiopian Z;Rozvi Z;Sasanian Z;E Vietnam;Shilluk Y;K Aksum;Gwiriko Y;Toro Y;Malindi Y;K Loango;K Mapungubwe;Ryukyu Y;K Cyprus;K Jerusalem;Garhwal Y;K Nepal;K Cambodia;Champa Y;Hanthawaddy Y;Phayao Y;K Sardinia;K Sicily;K Gwynedd;K Scotland;K Desmond;K Poland;K Hungary;K Croatia;K Bohemia;Albanian Y;K Georgia;K Portugal;Khanate of Sibir;K Romania;Cossack Hetmanate;Duchy of Bouillon;K Ireland;Lordship of Ireland;K Italy;Republic of Pisa;Idrisid z;Almoravid z;Almohad Caliphate;Marinid z;Wattasid z;Saadian z;Republic of Sal\u00e9;Rif Republic;K Kush;Makuria;Alodia;Ayyubid z;Mamluk s;Egypt Eyalet;K Fazughli;S Sennar;S Darfur;Mahdist State;S Egypt;K Egypt;Emirate of Cyrenaica;K Libya;Republic of Egypt;Republic of the Sudan;United Arab Republic;Libyan Arab Republic;Zirid z;Hafsid z;K Kuku;Regency of Algiers;Gurunsi;Liptako;Tenkodogo;Wogodogo;Yatenga;Bilanga;Bilayanga;Bongandini;Con;Macakoali;Piela;Nungu;K Sine;K Saloum;K Baol;K Cayor;K Waalo;Bundu;Bonoman;Gyaaman;Denkyira;Mankessim Y;K Dahomey;Oyo Z;K Nri;Aro Confederacy;Kwararafa;Biafra;Buganda;Bunyoro;Ankole;Busoga;Tanganyika;Kuba Y;K Luba;K Lunda;Yeke Y;K Ndongo;Kasanje Y;K Matamba;Mbunda Y;Chokwe Y;Kazembe Y;K Butua;Ndebele Y;Mthethwa Z;Bophuthatswana;Ciskei;Transkei;Venda;Rhodesia;Kart z;Nogai Horde;Khanate of Bukhara;Khanate of Khiva;Khamag Mongol;Northern Fujiwara;Kamakura Shogunate;Ashikaga Shogunate;Jaxa;Republic of Ezo;Jiangxi Soviet;Hunan Soviet;Guangzhou Commune;Gojoseon;Alaiye;Beylik of Bafra;Kara Koyunlu;Kars Republic;K Iraq;Arab Federation;Kar-Kiya z;Baduspanids;Marashiyan z;Afrasiyab z;Mihrabanid z;Safavid Iran;Sheikhdom of Kuwait;Bani Khalid Emirate;Emirate of Diriyah;Emirate of Najd;Muscat and Oman;Emirate of Riyadh;S Najd;K Hejaz;Fadhli s;Emirate of Beihan;Emirate of Dhala;S Lahej;Republic of Kuwait;K Cochin;Jaffna Y;Laur Y;Pandya z;Jaunpur s;Jaintia Y;Hyderabad State;Travancore;Udaipur State;Manikya z;Lan Xang;K Vientiane;K Champasak;Lao Issara;K Laos;Pyu States;Ava;Mon Ys;Pegu;K Mrauk U;Taungoo z;Shan States;Arakan;Raktamaritika;Singhanavati;Dvaravati;Ngoenyang;Hariphunchai;Tambralinga;Lavo Y;Langkasuka;Sukhothai Y;S Singora;Ayutthaya Y;Thonburi Y;Lan Na;Pattani Y;Jambi s;Palembang s;S Deli;S Langkat;S Serdang;S Cirebon;K Pajang;K Bali;Bima s;K Larantuka;K Banggai;Luwu;S Bone;Caucasian Albania;Kabardia;Circassia;K Abkhazia;Elisu s;Avar Khanate;Caucasian Imamate;K Imereti;K Kartli;K Kakheti;Crown of Aragon;Emirate of Granada;K Majorca;Crown of Castile;K Haiti;Cocoll\u00e1n;Zapotec Civilization;Mosquito Y;Somoza Regime;Iroquois Confederacy;Cherokee Nation;Vermont Republic;State of Muskogee;K Alo;K Sigave;K Fiji;K Nauru;K Chile;Muisca Confederation;El Stronato;K Chimor;Jungle Republic;Liga Federal;Supreme Junta;Weimar Republic;K Bavaria;Bremen;Frankfurt;Hamburg;K Hanover;Holstein;Lippe;Nassau;Oldenburg;Pomerania;Reuss;Saxe-Altenburg;Saxony;Schleswig;Waldeck;W\u00fcrttemberg;Helvetic Republic;Republic of Florence;Duchy of Urbino;Republic of Cospaia;Duchy of Lucca;Duchy of Mantua;Duchy of Milan;Papal States".split(";");
             k = "Antin Mark Artem Viktor Pasha Maxim Rodion Yuri Lev Luka Ivan Igor Nikita Leonid Daniil Alexei Boris Sasha Yulia Luda Yana Kira Alisa Polina Mischa Mila Inessa Alyona Alina Anya Anna Maria Sofia Walda Uta Tyra Tanka Svea Saskia Runa Rigmor Ostara Nanna Lykke Kunna Irma Iduna Helga Gudrun Gisela Gerda Gelsa Freya Frauke Ferun Elke Eila Dagmar Ariald Dagwin Eckwin Edmund Eike Erkmar Erwin Falko Frowin Gerbod Gunnar Halvor Irvin Knut Leif Lando Odin Oswin Ragin Rainer Rango Sarolf Thor Ulf Wolf Sarah Emma Laura Chloe Marie L\u00e9a Emily Keyla Manon Julie Julia Alice Kim Lisa Kora Clara Sara Lucie Anais Grace Eva Zoe Lee Katie Jade Ines Lily Amy Megan Lucy Elisa Kate Mary Elise Nina C\u00e9lia Ma\u00ebva Kayla Elysa Lena Amber Kelly Jenny Lola Mia Abby Ella Diana Fanny Ellie Ana Cindy Elena Rose Erin Molly Park Jane Lina Bella Lou Alex Irene Elsa Leah Holly Maya Linda Carla Anne Paige Annie Jenna Karen Lydia Haley Hanna Wendy Luna Naomi Sonia Fiona Helen Ambre Jess Angel Leila Lara Tina Ann Laur\u00e9 Chen Daisy Paula Iris Ruby Minji Marta Sam Erika Nora Nadia Eve Erica Ava Wang Choi Yujin Jin Yang Hina Beth Lucia Faith Jiwon Ad\u00e8le Alexa Min Flora Nancy Lili Lexi Cloe Hana Lin Kenza Lise Li Mina Angie Lotte Sandy Vicky May Jamie Joy Jeong Tara Sally Merve Diane Maddy Lilly Alix Zhang Gabby Abbie Liz Ellen Rita Olga Dana Elif Maud Sunny Joyce Liu Jieun Rosie Becky Jung Ilona Kylie Ruth Kat Han Nikki Kang Tania Dasha Cathy Aline Jo Ally Lilou Sujin Tanya Amina Yu Aya Katy Becca Rosa Paola Anita Sumin Betty Subin Tessa Heidi Tori Lila Imane Yoon Allie Farah Ciara Gina Yejin Song Susan Niamh April Izzy Aude Liza Salma Ivy Elina Liya Sue Gwen Maia Mimi Mandy Nana Sanne Hope Ariel Eliza Daria Yuna Evie Aimee Avery Agn\u00e8s Stacy Jisu Madi Riley Carly Lia Irina".split(" ");
             var u = "K ; Y;E ; Z; z; s;S ".split(";"),
                 m = "Kingdom of ; Kingdom;Empire of ; Empire; Dynasty; Sultanate;Sultanate of ".split(";");
@@ -7273,7 +7273,7 @@
         this.bi = function () {
             g = Array(a0Q);
             g[0] = {
-                mE: "White Arena",
+                mE: "first Arena",
                 bu: 230,
                 cp: 230,
                 g4: 1E3,
@@ -7282,7 +7282,7 @@
                 per: 1
             };
             g[1] = {
-                mE: "Black Arena",
+                mE: "second Arena",
                 bu: 800,
                 cp: 800,
                 g4: 100,
@@ -7300,7 +7300,7 @@
                 per: 1.5
             };
             g[3] = {
-                mE: "Mountains",
+                mE: "MineCraft",
                 bu: 960,
                 cp: 960,
                 g4: 60,
@@ -7309,7 +7309,7 @@
                 per: 1.2
             };
             g[4] = {
-                mE: "Desert",
+                mE: "Beach",
                 bu: 900,
                 cp: 900,
                 g4: 100,
@@ -7318,7 +7318,7 @@
                 per: 1.2
             };
             g[5] = {
-                mE: "Swamp",
+                mE: "edora planet",
                 bu: 1E3,
                 cp: 1E3,
                 g4: 100,
@@ -7354,7 +7354,7 @@
                 per: 1.2
             };
             g[9] = {
-                mE: "Halo",
+                mE: "funny map",
                 bu: 1024,
                 cp: 1024,
                 g4: 128,
@@ -7377,14 +7377,14 @@
                 per: 1
             };
             g[12] = {
-                mE: "Caucasia",
+                mE: "Black sea",
                 a0m: [140, 130, 120],
                 a0n: [20, 20, 84],
                 a0o: [240, 120, 100, 30, 25, 30, 90, 8, 32, 3, 9],
                 per: 1
             };
             g[13] = {
-                mE: "USA 48",
+                mE: "USA",
                 a0m: [120, 105, 92],
                 a0n: [12, 12, 60],
                 a0o: [300, 300,
